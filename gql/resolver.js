@@ -1,20 +1,20 @@
-const resolvers = {
-  Query: {
-    // User
-    getUser: ()=>{
-      console.log('obteniendo usuario');
-      return null;
+const userController = require('../controllers/user');
 
-    }
-  },
-  Mutation:{
-    //User
-    register: (_, {input}) => {
-      console.log('Registrando user');
-      console.log(input)
-      return input;
-    }
-  }
-}
+const resolvers = {
+	Query: {
+		// User
+		getUser: () => {
+			console.log('obteniendo usuario');
+			return null;
+		},
+	},
+	Mutation: {
+		//User
+		register: (_, { input }) => {
+			userController.register(input);
+		},
+		login: (_, { input }) => userController.login(input),
+	},
+};
 
 module.exports = resolvers;
