@@ -1,0 +1,18 @@
+{
+  "name": "instaclone",
+  "version": "0.0.1",
+  "description": "server app instaclone",
+  "main": "index.js",
+  "author": "Giovanni Insfran",
+  "license": "MIT",
+  "private": null,
+  "scripts": {
+    "dev": "node ./index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^2.25.1",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.5.0",
+    "mongoose": "^5.12.14"
+  }
+}
